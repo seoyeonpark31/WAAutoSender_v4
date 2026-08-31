@@ -14,16 +14,18 @@ jobs:
         uses: actions/checkout@v4
 
       - name: JDK 17 설정
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Gradle 실행 권한 부여
-        run: chmod +x gradlew
+      - name: gradlew 줄바꿈 및 권한 수정
+        run: |
+          sed -i 's/\r//' gradlew
+          chmod +x gradlew
 
       - name: APK 빌드
-        run: ./gradlew assembleDebug --no-daemon
+        run: ./gradlew assembleDebug --no-daemon --stacktrace
 
       - name: APK 업로드
         uses: actions/upload-artifact@v4
