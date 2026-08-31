@@ -36,4 +36,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: WAAutoSender-debug
-         path: app/build/outputs/apk/debug/WhatsAppAutoSender-debug.apk
+          path: app/build/outputs/apk/debug/WhatsAppAutoSender-debug.apk
