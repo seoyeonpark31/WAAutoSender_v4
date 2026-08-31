@@ -19,7 +19,12 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: gradlew 줄바꿈 및 권한 수정
+      - name: gradle-wrapper.jar 복구
+        run: |
+          curl -L -o gradle/wrapper/gradle-wrapper.jar \
+            "https://github.com/gradle/gradle/raw/v8.2.0/gradle/wrapper/gradle-wrapper.jar"
+
+      - name: gradlew 권한 부여
         run: |
           sed -i 's/\r//' gradlew
           chmod +x gradlew
