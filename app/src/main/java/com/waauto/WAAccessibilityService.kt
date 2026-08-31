@@ -28,15 +28,15 @@ class WAAccessibilityService : AccessibilityService() {
         var isReadyToSend: Boolean = false
         var instance: WAAccessibilityService? = null
 
-        // 사진 전송 상태 머신
-        var photoMode: Boolean = false
-        var photoStep: Int = STEP_ATTACH
-
+        // 사진 전송 상태 머신 – 상수 먼저, var는 나중에
         const val STEP_ATTACH  = 0   // 첨부(클립) 버튼 클릭
         const val STEP_GALLERY = 1   // 갤러리 메뉴 클릭
         const val STEP_IMAGE   = 2   // 첫 번째 이미지 선택
         const val STEP_CAPTION = 3   // 캡션(메시지) 입력
         const val STEP_SEND    = 4   // 전송 버튼 클릭
+
+        var photoMode: Boolean = false
+        var photoStep: Int = 0       // STEP_ATTACH(=0)
     }
 
     private val handler = Handler(Looper.getMainLooper())

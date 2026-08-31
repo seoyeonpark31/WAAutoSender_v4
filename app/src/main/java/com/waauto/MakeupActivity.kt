@@ -14,6 +14,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 
@@ -87,7 +88,7 @@ class MakeupActivity : AppCompatActivity() {
     // ─── 사진 선택 ──────────────────────────────────────────────────────────
 
     private fun launchPicker() {
-        pickPhoto.launch(ActivityResultContracts.PickVisualMedia.ImageOnly)
+        pickPhoto.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
     }
 
     private fun handlePhotoSelected(uri: Uri) {

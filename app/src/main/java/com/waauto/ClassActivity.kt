@@ -14,6 +14,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 
@@ -109,7 +110,7 @@ class ClassActivity : AppCompatActivity() {
 
     private fun launchPicker() {
         pickPhoto.launch(
-            ActivityResultContracts.PickVisualMedia.ImageOnly
+            PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly)
         )
     }
 
