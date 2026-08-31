@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F0F0F0">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 저장된 번호 안내 카드 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:padding="14dp"
+                android:elevation="3dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/tvSavedCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="💾 저장된 연락처: 0명"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#333333"
+                    android:paddingBottom="6dp"/>
+
+                <TextView
+                    android:id="@+id/tvSavedPreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="아직 저장된 번호가 없어요"
+                    android:textSize="13sp"
+                    android:textColor="#666666"
+                    android:lineSpacingExtra="3dp"/>
+
+                <Button
+                    android:id="@+id/btnClear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🗑️ 전체 삭제"
+                    android:backgroundTint="#9E9E9E"
+                    android:textColor="#FFFFFF"
+                    android:padding="8dp"
+                    android:textSize="12sp"
+                    android:layout_marginTop="8dp"/>
+            </LinearLayout>
+
+            <!-- 번호 붙여넣기 카드 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:padding="14dp"
+                android:elevation="3dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="📋 와츠앱 번호 붙여넣기"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#333333"
+                    android:paddingBottom="4dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="와츠앱에서 번호를 드래그·복사 후 여기에 붙여넣으세요.\n(국가코드 포함, 줄/쉼표 모두 가능)"
+                    android:textSize="11sp"
+                    android:textColor="#888888"
+                    android:paddingBottom="8dp"/>
+
+                <EditText
+                    android:id="@+id/etPaste"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:hint="예)\n+233 50 893 5316\n+233203343285\nhttps://wa.me/233xxxxxxxxx"
+                    android:gravity="top"
+                    android:padding="10dp"
+                    android:background="#F8F8F8"
+                    android:inputType="textMultiLine"
+                    android:textSize="13sp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+
+                    <Button
+                        android:id="@+id/btnSaveOverwrite"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="💾 새로 저장(덮어쓰기)"
+                        android:backgroundTint="#2196F3"
+                        android:textColor="#FFFFFF"
+                        android:padding="10dp"
+                        android:textSize="12sp"
+                        android:layout_marginEnd="4dp"/>
+
+                    <Button
+                        android:id="@+id/btnSaveAppend"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="➕ 기존에 추가"
+                        android:backgroundTint="#607D8B"
+                        android:textColor="#FFFFFF"
+                        android:padding="10dp"
+                        android:textSize="12sp"
+                        android:layout_marginStart="4dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 메시지 카드 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:padding="14dp"
+                android:elevation="3dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="💬 전송할 메시지"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#333333"
+                    android:paddingBottom="8dp"/>
+
+                <EditText
+                    android:id="@+id/etMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:hint="이 반에 보낼 메시지를 입력하세요"
+                    android:gravity="top"
+                    android:padding="10dp"
+                    android:background="#F8F8F8"
+                    android:inputType="textMultiLine"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <!-- 사진 첨부 카드 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:padding="14dp"
+                android:elevation="3dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="📷 사진 첨부 (선택사항)"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#333333"
+                    android:paddingBottom="4dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="사진을 선택하면 메시지와 함께 전송됩니다. 선택 안 하면 텍스트만 전송됩니다."
+                    android:textSize="11sp"
+                    android:textColor="#888888"
+                    android:paddingBottom="10dp"/>
+
+                <!-- 사진 미선택 상태 -->
+                <LinearLayout
+                    android:id="@+id/layoutNoPhoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="선택된 사진 없음"
+                        android:textSize="13sp"
+                        android:textColor="#AAAAAA"/>
+
+                    <Button
+                        android:id="@+id/btnPickPhoto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="갤러리 선택"
+                        android:backgroundTint="#5C6BC0"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        android:padding="8dp"/>
+                </LinearLayout>
+
+                <!-- 사진 선택됨 상태 (기본 숨김) -->
+                <LinearLayout
+                    android:id="@+id/layoutPhotoSelected"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/ivPhotoThumb"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:scaleType="centerCrop"
+                        android:background="#EEEEEE"
+                        android:layout_marginEnd="10dp"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvPhotoName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="사진 선택됨"
+                            android:textSize="13sp"
+                            android:textColor="#333333"
+                            android:maxLines="1"
+                            android:ellipsize="end"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="6dp">
+
+                            <Button
+                                android:id="@+id/btnChangePhoto"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="변경"
+                                android:backgroundTint="#607D8B"
+                                android:textColor="#FFFFFF"
+                                android:textSize="11sp"
+                                android:padding="6dp"
+                                android:layout_marginEnd="6dp"/>
+
+                            <Button
+                                android:id="@+id/btnRemovePhoto"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="✕ 제거"
+                                android:backgroundTint="#E53935"
+                                android:textColor="#FFFFFF"
+                                android:textSize="11sp"
+                                android:padding="6dp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 전송 버튼 -->
+    <Button
+        android:id="@+id/btnSend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="📤 저장된 번호로 전송하기"
+        android:backgroundTint="#FF9800"
+        android:textColor="#FFFFFF"
+        android:padding="16dp"
+        android:layout_margin="12dp"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+</LinearLayout>

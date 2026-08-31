@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">와츠앱 자동전송</string>
+    <string name="accessibility_service_label">와츠앱 자동전송 서비스</string>
+    <string name="accessibility_service_description">
+        WhatsApp 메시지를 자동으로 전송하기 위해 WhatsApp 화면을 제어합니다.
+        연락처 정보나 개인 메시지를 수집하지 않습니다.
+    </string>
+</resources>

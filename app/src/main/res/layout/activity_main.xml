@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 상단 헤더 + 권한 영역 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="14dp"
+            android:background="#1A1A2E">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📱 와츠앱 자동전송"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:paddingBottom="10dp"/>
+
+            <Button
+                android:id="@+id/btnAccessibility"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="⚠️ 접근성 권한 허용하기 (필수)"
+                android:backgroundTint="#FF5722"
+                android:textColor="#FFFFFF"
+                android:padding="10dp"
+                android:textSize="13sp"
+                android:layout_marginBottom="4dp"/>
+
+            <Button
+                android:id="@+id/btnOverlay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="⚠️ 다른 앱 위에 표시 허용하기 (필수)"
+                android:backgroundTint="#E91E63"
+                android:textColor="#FFFFFF"
+                android:padding="10dp"
+                android:textSize="13sp"/>
+        </LinearLayout>
+
+        <!-- 클래스 카드들 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <!-- A반 -->
+            <LinearLayout
+                android:id="@+id/cardAclass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#FFFFFF"
+                android:padding="18dp"
+                android:elevation="3dp"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <View
+                    android:layout_width="6dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="14dp"
+                    android:minHeight="56dp"
+                    android:background="#2196F3"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="A반"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#222222"/>
+
+                    <TextView
+                        android:id="@+id/tvAclassCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0명 저장됨"
+                        android:textSize="13sp"
+                        android:textColor="#666666"
+                        android:paddingTop="2dp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="›"
+                    android:textSize="26sp"
+                    android:textColor="#999999"/>
+            </LinearLayout>
+
+            <!-- B반 -->
+            <LinearLayout
+                android:id="@+id/cardBclass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#FFFFFF"
+                android:padding="18dp"
+                android:elevation="3dp"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <View
+                    android:layout_width="6dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="14dp"
+                    android:minHeight="56dp"
+                    android:background="#4CAF50"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="B반"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#222222"/>
+
+                    <TextView
+                        android:id="@+id/tvBclassCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0명 저장됨"
+                        android:textSize="13sp"
+                        android:textColor="#666666"
+                        android:paddingTop="2dp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="›"
+                    android:textSize="26sp"
+                    android:textColor="#999999"/>
+            </LinearLayout>
+
+            <!-- 메이크업 (빠른전송) -->
+            <LinearLayout
+                android:id="@+id/cardMakeup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#FFFFFF"
+                android:padding="18dp"
+                android:elevation="3dp"
+                android:gravity="center_vertical"
+                android:clickable="true"
+                android:focusable="true">
+
+                <View
+                    android:layout_width="6dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="14dp"
+                    android:minHeight="56dp"
+                    android:background="#E91E63"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="메이크업 (빠른전송)"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#222222"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="번호 붙여넣고 바로 전송"
+                        android:textSize="13sp"
+                        android:textColor="#666666"
+                        android:paddingTop="2dp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="›"
+                    android:textSize="26sp"
+                    android:textColor="#999999"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
